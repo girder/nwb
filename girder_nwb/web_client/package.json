@@ -1,0 +1,12 @@
+{
+    "name": "@girder/nwb",
+    "version": "0.1.0",
+    "private": true,
+    "description": "Interact with nwb files using girder",
+    "homepage": "https://github.com/girder/nwb",
+    "license": "Apache-2.0",
+    "girderPlugin": {
+        "name": "nwb",
+        "main": "./main.js"
+    }
+}
