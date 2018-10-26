@@ -17,7 +17,7 @@ def nwb_handler(event):
 
 
 class GirderPlugin(plugin.GirderPlugin):
-    DISPLAY_NAME = ("nwb",)
+    DISPLAY_NAME = "NWB Viewer"
     CLIENT_SOURCE_PATH = "web_client"
 
     def load(self, info):
