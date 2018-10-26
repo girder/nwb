@@ -1,11 +1,8 @@
 from girder import plugin
 from girder import events
 
-import pluggy
+from girder_nwb.plugin_registry import get_plugin_manager
 
-from .plugin_registry import get_plugin_manager
-
-hookimpl = pluggy.HookimplMarker("girder_nwb")
 
 def nwb_handler(event):
     extensions = [i.lower() for i in event.info["file"]["exts"]]

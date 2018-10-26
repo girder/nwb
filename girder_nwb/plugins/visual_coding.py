@@ -1,4 +1,4 @@
-from girder_nwb import hookimpl
+from girder_nwb.config import hookimpl
 
 
 @hookimpl
