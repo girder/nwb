@@ -5,8 +5,7 @@ import pluggy
 
 from .plugin_registry import get_plugin_manager
 
-hookimpl = pluggy.HookimplMarker("nwb_girder")
-
+hookimpl = pluggy.HookimplMarker("girder_nwb")
 
 def nwb_handler(event):
     extensions = [i.lower() for i in event.info["file"]["exts"]]
@@ -22,4 +21,6 @@ class GirderPlugin(plugin.GirderPlugin):
     CLIENT_SOURCE_PATH = "web_client"
 
     def load(self, info):
-        events.bind("model.file.finalizeUpload.after", "nwb_handler", nwb_handler)
+        events.bind(
+            "model.file.finalizeUpload.after", "nwb_handler", nwb_handler
+        )

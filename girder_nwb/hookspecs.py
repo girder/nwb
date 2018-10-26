@@ -1,6 +1,6 @@
 import pluggy
 
-hookspec = pluggy.HookspecMarker("nwb_girder")
+hookspec = pluggy.HookspecMarker("girder_nwb")
 
 
 @hookspec
